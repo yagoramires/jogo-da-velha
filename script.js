@@ -38,6 +38,8 @@ function validateChoice(choice) {
 startButton.addEventListener('click', () => {
   const player = document.querySelector('.player_avatar');
 
+  const bot = document.querySelector('.bot_avatar');
+
   player.classList.remove('red');
   player.classList.remove('green');
   player.classList.remove('orange');
@@ -52,8 +54,6 @@ startButton.addEventListener('click', () => {
   const botChoice = randomChoice();
 
   const win = winner(playerChoice, botChoice);
-
-  const bot = document.querySelector('.bot_avatar');
 
   console.log(player);
   console.log(bot);
