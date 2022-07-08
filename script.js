@@ -55,9 +55,6 @@ startButton.addEventListener('click', () => {
 
   const win = winner(playerChoice, botChoice);
 
-  console.log(player);
-  console.log(bot);
-
   if (win == 'player') {
     player.classList.add('green');
     player.innerText = 'Winner';
