@@ -1,7 +1,7 @@
-const image = document.querySelectorAll('.duel-image');
-const startButton = document.querySelector('.start__btn ');
+const image = document.querySelectorAll('.game__image');
+const startButton = document.querySelector('.game__start');
 
-const board = document.querySelector('.board');
+const board = document.querySelector('.game__board');
 
 function randomChoice() {
   const options = ['rock', 'paper', 'scissor'];
@@ -27,18 +27,18 @@ function winner(playerChoice, botChoice) {
 
 function validateChoice(choice) {
   if (choice == 'rock') {
-    return `<img src="./assets/rock.png" alt="" class="duel-image" />`;
+    return `<img src="./assets/rock.png" alt="" class="game__image" />`;
   } else if (choice == 'paper') {
-    return `<img src="./assets/paper.png" alt="" class="duel-image" />`;
+    return `<img src="./assets/paper.png" alt="" class="game__image" />`;
   } else {
-    return `<img src="./assets/scissors.png" alt="" class="duel-image" />`;
+    return `<img src="./assets/scissors.png" alt="" class="game__image" />`;
   }
 }
 
 startButton.addEventListener('click', () => {
-  const player = document.querySelector('.player_avatar');
+  const player = document.querySelector('.game__avatar-player');
 
-  const bot = document.querySelector('.bot_avatar');
+  const bot = document.querySelector('.game__avatar-bot');
 
   player.classList.remove('red');
   player.classList.remove('green');

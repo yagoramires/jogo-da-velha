@@ -8,101 +8,83 @@
 body {
     background-color: #f5d020;
     background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+    background-repeat: no-repeat;
 }
 
-main {
+.main {
     height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.main__title {
+    font-size: 2rem;
+    color: rgba(240, 240, 240);
+
 }
 
 .game__container {
+    margin-top: 1rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
     gap: 2rem;
 }
 
-.title {
-    font-size: 3rem;
-    color: rgba(240, 240, 240);
-    margin-bottom: 5rem;
-}
+.game__board {
+    height: 300px;
+    width: 90%;
+    max-width: 600px;
 
-.board {
-    width: 600px;
     margin: 0 auto;
-    padding: 5rem;
-    border-radius: 1rem;
+    padding: 0 2rem;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    gap: 20px;
 
     background-image: linear-gradient(315deg, #fadfca 0%, #fddbb9 74%);
 
-
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: space-around;
 }
 
-.board span {
-    font-size: 3rem;
+.game__board span {
+    margin: 0 auto;
+    font-size: 2rem;
     font-weight: 900;
     color: #f53803;
 }
 
-.duel-image {
+.game__image {
     width: 100px;
 }
 
-.options {
-    width: 100px;
+.options__container {
+    width: 200px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: .5rem;
 }
 
-.options div:nth-of-type(2) {
-    width: 100px;
+.options__opt {
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    gap: .5rem;
 }
 
-.image-label {
-
-    width: 30px;
+.options__images {
+    max-width: 40px;
 }
 
-.player {
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.start__btn {
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: .5rem;
-    background-color: #f53803;
-    color: #f6f0ea;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.bot_avatar,
-.player_avatar {
+.game__avatar {
     width: 70px;
     height: 70px;
     border-radius: .5rem;
@@ -112,7 +94,25 @@ main {
     color: #fff;
     font-weight: 700;
     text-align: center;
-    /* background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%); */
+}
+
+.game__start {
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    background-color: #f53803;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+
+    color: #f6f0ea;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: filter .3s;
+}
+
+.game__start:hover {
+    filter: brightness(.9);
 }
 
 .red {

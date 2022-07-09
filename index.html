@@ -14,49 +14,44 @@
     <title>Jogo da Velha</title>
   </head>
   <body>
-    <main>
-      <h1 class="title">ROCK PAPER SCISSOR</h1>
+    <main class="main">
+      <h1 class="main__title">PEDRA, PAPEL & TESOURA</h1>
 
       <div class="game__container">
-        <div class="bot_avatar"></div>
+        <div class="game__avatar game__avatar-bot"></div>
 
-        <div class="board">
-          <span>MAKE YOUR MOVE</span>
+        <div class="game__board">
+          <span>FAÇA SUA JOGADA</span>
         </div>
 
-        <div class="player">
-          <div class="options">
-            <div>
-              <label for="rock">
-                <img src="./assets/rock.png" alt="" class="image-label" />
-              </label>
-              <label for="paper">
-                <img src="./assets/paper.png" alt="" class="image-label" />
-              </label>
-              <label for="scissor">
-                <img src="./assets/scissors.png" alt="" class="image-label" />
-              </label>
-            </div>
-            <div>
-              <input type="radio" name="playerChoice" id="rock" value="rock" />
-              <input
-                type="radio"
-                name="playerChoice"
-                id="paper"
-                value="paper"
-              />
-              <input
-                type="radio"
-                name="playerChoice"
-                id="scissor"
-                value="scissor"
-              />
-            </div>
+        <div class="game__avatar game__avatar-player"></div>
+
+        <div class="options__container">
+          <div class="options__opt">
+            <label for="rock">
+              <img src="./assets/rock.png" alt="" class="options__images" />
+            </label>
+            <input type="radio" name="playerChoice" id="rock" value="rock" />
           </div>
-
-          <div class="player_avatar"></div>
-          <button type="button" class="start__btn">FIGHT!</button>
+          <div class="options__opt">
+            <label for="paper">
+              <img src="./assets/paper.png" alt="" class="options__images" />
+            </label>
+            <input type="radio" name="playerChoice" id="paper" value="paper" />
+          </div>
+          <div class="options__opt">
+            <label for="scissor">
+              <img src="./assets/scissors.png" alt="" class="options__images" />
+            </label>
+            <input
+              type="radio"
+              name="playerChoice"
+              id="scissor"
+              value="scissor"
+            />
+          </div>
         </div>
+        <button type="button" class="game__start">FIGHT!</button>
       </div>
     </main>
 
